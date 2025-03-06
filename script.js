@@ -16,12 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Hover effect untuk tombol menggunakan class tambahan
-    const buttons = document.querySelectorAll('.buttons .btn');
-    buttons.forEach(button => {
-        button.classList.add('hover-effect');
-    });
-
     // Animasi saat memuat gambar profil
     const profileImage = document.querySelector('.hero-image img');
     if (profileImage) {
@@ -39,11 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
         contactForm.addEventListener('submit', function (e) {
             e.preventDefault(); // Mencegah submit default sebelum validasi
 
-            const name = document.getElementById('name').value.trim();
+            const fullName = document.getElementById('full-name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
 
-            if (!name || !email || !message) {
+            if (!fullName || !email || !message) {
                 alert('Mohon lengkapi semua bidang!');
                 return;
             }
